@@ -8,6 +8,8 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 /* общие стили */
@@ -16,6 +18,10 @@ body {
     font-family: "Open Sans", sans-serif;
     max-width: 1440px;
     margin: 0 auto;
+}
+
+h2 {
+    text-transform: uppercase;
 }
 
 
@@ -33,27 +39,157 @@ body {
         "wdth" 100;
 } */
 
+/* .bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+
+    font-style: normal;
+} */
+
+
+.container {
+    max-width: 1440px;
+    border: 1px solid #3c00ff;
+    margin: 0 auto;
+    padding: 0 250px;
+    padding-right: 250px;
+    padding-left: 250px;
+}
 
 .header {
     background-image: url(../img/bg.png);
-    height: 768px;
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 70px;
 }
 
-.container {
-    width: 100%;
-    max-width: 1440px;
-    /* border: 1px solid #3c00ff; */
+.header_logo {
     margin: 0 auto;
-    padding: 0 250px;
+    /* border: 1px solid #000; */
+    text-align: center;
+    width: 102px;
+    height: 23px;
+
 }
 
+.img_header_logo {
+    width: 102px;
+    height: 23px;
+}
+
+.h1_header {
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    letter-spacing: 4.5px;
+    text-align: center;
+    padding-top: 315px;
+    line-height: 60px;
+}
+
+.p_header {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.p_header_scroll_down {
+    padding-top: 221px;
+    font-size: 11px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 4px;
+
+}
+
+@media screen and (max-width: 1439px) {
+    .h1_header {
+        padding-top: 200px;
+    }
+
+    .p_header_scroll_down {
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .h1_header {
+        padding-top: 100px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {}
+
+/* раздел navbar */
 .navbar {
-    height: 65px;
-    border: 1px solid #000;
+    /* height: 65px; */
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22px;
 }
 
-h2 {
+.navbar_logo {
+
+    width: 80px;
+    height: 18px;
+    /* border: 1px solid #000; */
+    margin-bottom: 22px;
+}
+
+.img_navbar_logo {
+    width: 80px;
+    height: 18px;
+}
+
+.navbar_menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+    list-style-type: none;
+    /* border: 1px solid #000; */
+}
+
+.navbar_menu_item {
+    margin-right: 45px;
     text-transform: uppercase;
+    font-size: 12px;
+}
+
+.navbar_menu_item:last-child {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 1439px) {
+    .container {
+        padding: 0 50px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .navbar_menu_item {
+        margin-right: 20px;
+    }
+
+    .navbar_menu {
+        flex-wrap: wrap;
+        margin: 0 15px;
+    }
+
+    .navbar {
+        padding-top: 15px;
+    }
+
 }
 
 /* раздел Story */
@@ -62,13 +198,14 @@ h2 {
 }
 
 .h2_story_title {
-    padding-top: 45px;
+    padding-top: 55px;
     font-size: 18px;
     text-align: center;
     font-weight: bold;
     letter-spacing: 2.31px;
-    margin-bottom: 34px;
+    margin-bottom: 40px;
     color: #48555B;
+
 }
 
 .h2_story_title:after {
@@ -97,11 +234,17 @@ h2 {
     font-size: 20px;
     font-weight: bold;
     color: #48555B;
-    line-height: 30px;
+    line-height: 28px;
+    padding-bottom: 20px;
 }
 
 span.h3_accent-color {
     color: #16ACE8;
+}
+
+.p_story_text {
+    font-size: 13px;
+    line-height: 23px;
 }
 
 .story_right {
@@ -138,9 +281,10 @@ span.h3_accent-color {
     background-image: url(../img/we_build.png);
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .container {
         padding: 0 50px;
+        width: 100%;
     }
 
     .story_inner {
