@@ -1,0 +1,179 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* общие стили */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+/* .open-sans-<uniquifier> {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    Regular 400
+    SemiBold 600
+    Bold 700
+    ExtraBold 800
+  
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+} */
+
+
+.header {
+    background-image: url(../img/bg.png);
+    height: 768px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    /* border: 1px solid #3c00ff; */
+    margin: 0 auto;
+    padding: 0 250px;
+}
+
+.navbar {
+    height: 65px;
+    border: 1px solid #000;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+/* раздел Story */
+.story {
+    /* border: 1px solid #d11919; */
+}
+
+.h2_story_title {
+    padding-top: 45px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2.31px;
+    margin-bottom: 34px;
+    color: #48555B;
+}
+
+.h2_story_title:after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: #00A4E5;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.story_inner {
+    display: flex;
+    /* border: 1px solid #000; */
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.story_left {
+    max-width: 395px;
+    /* border: 1px solid #035a00; */
+}
+
+.h3_story_title {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #48555B;
+    line-height: 30px;
+}
+
+span.h3_accent-color {
+    color: #16ACE8;
+}
+
+.story_right {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    /* border: 1px solid #576d00; */
+}
+
+.story_item {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    width: 140px;
+    height: 224px;
+    text-transform: uppercase;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.story_item:last-child {
+    margin-right: 0;
+}
+
+.story_item:nth-child(1) {
+    background-image: url(../img/we_plan.png);
+}
+
+.story_item:nth-child(2) {
+    background-image: url(../img/we_manage.png);
+}
+
+.story_item:nth-child(3) {
+    background-image: url(../img/we_build.png);
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        padding: 0 50px;
+    }
+
+    .story_inner {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .story_left {
+        width: 100%;
+    }
+
+    .story_right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .story_inner {
+        flex-wrap: wrap;
+    }
+
+    .story_item {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .story_right {
+        flex-wrap: wrap;
+    }
+}
